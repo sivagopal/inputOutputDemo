@@ -1,0 +1,16 @@
+<div class="container text-center">
+    <countdown-timer [seconds]="25"
+               (progress)="onProgress($event)" (complete)="onCountdownCompleted()"
+               #counter >
+    </countdown-timer>
+    <p>
+      <button class="btn btn-default"
+              (click)="counter.seconds = 25;onProgress($event)">
+        Reset
+      </button>
+    </p>
+    <p *ngIf="counter.seconds < 10">
+      Beware only !
+      <strong>{{counter.seconds}} seconds</strong> left
+    </p>
+  </div>

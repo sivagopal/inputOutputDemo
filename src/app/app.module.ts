@@ -1,18 +1,16 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { TimerComponent } from './timer.component';
+import { CountdownTimerComponent } from './countdown.timer.component';
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
-})
-export class AppModule { }
+    declarations: [AppComponent, TimerComponent, CountdownTimerComponent],
+    imports: [
+        BrowserModule,
+        CommonModule
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
+  })
+  export class AppModule { }
